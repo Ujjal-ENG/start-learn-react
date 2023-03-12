@@ -1,10 +1,10 @@
 import React from 'react';
-import SignIN from './ConditionalREndering/SignIN';
+import ClassHandler from './EVENT_HANDLER/ClassHandler';
 
 const App = () => {
     return (
         <>
-            <SignIN />
+            <ClassHandler />
         </>
     );
 };
