@@ -1,7 +1,12 @@
 import React from 'react';
+import State from './components/State';
 
 const App = () => {
-    return <></>;
+    return (
+        <>
+            <State />
+        </>
+    );
 };
 
 export default App;
