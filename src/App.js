@@ -1,10 +1,11 @@
 import React from 'react';
-import Faq from './Toggle/Faq';
+
+import UseEffect from './HOOKS_USE-EFFECT/UseEffect';
 
 const App = () => {
     return (
         <>
-            <Faq />
+            <UseEffect />
         </>
     );
 };
