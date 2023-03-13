@@ -12,7 +12,7 @@ const Card = ({ data }) => {
     return (
         <div>
             <div className="p-10 space-y-3">
-                <img src={countryFlag} alt={common} className="w-[300px] h-[250px]" />
+                <img src={countryFlag} alt={common} className="w-[300px] h-[250px] hover:scale-110 transition-all" />
 
                 <h1 className="text-2xl font-bold ">Name: {common}</h1>
                 <h1 className="text-2xl font-bold ">Capital: {capital}</h1>
