@@ -1,10 +1,10 @@
 import React from 'react';
-import SignUp from './FormikValidation/SignUp';
+import Toggle from './Toggle/Toggle';
 
 const App = () => {
     return (
         <>
-            <SignUp />
+            <Toggle />
         </>
     );
 };
