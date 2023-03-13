@@ -7,11 +7,12 @@ const SignUp = () => {
             email: '',
             password: ''
         },
-        onSubmit: (values) => {
+
+        onSubmit: (values, { resetForm }) => {
             console.log(values);
+            resetForm({ values: '' });
         }
     });
-    const { name, email, password } = formik;
 
     return (
         <div className="max-w-6xl mx-auto">
@@ -19,13 +20,20 @@ const SignUp = () => {
 
             <form onSubmit={formik.handleSubmit}>
                 <label htmlFor="name">Name: </label>
-                <input type="text" name="name" id="name" className="outline-orange-600 border-2 border-black rounded-md m-5" value={name} onChange={formik.handleChange} />
+                <input type="text" name="name" id="name" className="outline-orange-600 border-2 border-black rounded-md m-5" value={formik.values.name} onChange={formik.handleChange} />
 
                 <label htmlFor="email">Email: </label>
-                <input type="email" name="email" id="email" className="outline-orange-600 border-2 border-black rounded-md m-5" value={email} onChange={formik.handleChange} />
+                <input type="email" name="email" id="email" className="outline-orange-600 border-2 border-black rounded-md m-5" value={formik.values.email} onChange={formik.handleChange} />
 
                 <label htmlFor="password">Password: </label>
-                <input type="password" name="password" id="password" className="outline-orange-600 border-2 border-black rounded-md m-5" value={password} onChange={formik.handleChange} />
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    className="outline-orange-600 border-2 border-black rounded-md m-5"
+                    value={formik.values.password}
+                    onChange={formik.handleChange}
+                />
 
                 <button type="submit" className="px-5 py-2 bg-violet-500 text-white text-xl font-bold rounded-md">
                     Submit Data
