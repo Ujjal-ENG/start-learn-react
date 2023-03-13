@@ -1,10 +1,10 @@
 import React from 'react';
-import DataFectch from './HOOKS_USE-EFFECT/DataFectch';
+import DataFetch from './CUSTOM-HOOKS/DataFetch';
 
 const App = () => {
     return (
         <>
-            <DataFectch />
+            <DataFetch />
         </>
     );
 };
