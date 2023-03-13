@@ -1,19 +1,11 @@
 import React from 'react';
 
-import Child from './CHILD-TO_PARENT/Child';
-import Todo from './CHILD-TO_PARENT/Todo';
+import Home from './CHILD-TO_PARENT/Home';
 
 const App = () => {
-    const handleChildData = (childData) => {
-        console.log(childData);
-    };
-    const handleTodoData = (childData) => {
-        console.log(childData);
-    };
     return (
         <>
-            <Child handleChildData={handleChildData} />
-            <Todo handleTodoData={handleTodoData} />
+            <Home />
         </>
     );
 };
