@@ -1,11 +1,10 @@
 import React from 'react';
-
-import UseEffect from './HOOKS_USE-EFFECT/UseEffect';
+import DataFectch from './HOOKS_USE-EFFECT/DataFectch';
 
 const App = () => {
     return (
         <>
-            <UseEffect />
+            <DataFectch />
         </>
     );
 };
