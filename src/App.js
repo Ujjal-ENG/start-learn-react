@@ -1,10 +1,15 @@
 import React from 'react';
-import DataFetch from './CUSTOM-HOOKS/DataFetch';
+import Cards from './CountryAPP/Cards';
+
+import useFetch from './CUSTOM-HOOKS/useFetch';
 
 const App = () => {
+    const { data, isLoading } = useFetch('https://restcountries.com/v3.1/all');
+
     return (
         <>
-            <DataFetch />
+            {isLoading && <h1>Data Is Loading...</h1>}
+            <Cards datas={data} />
         </>
     );
 };
