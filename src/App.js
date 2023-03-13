@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Cards from './CountryAPP/Cards';
 import Search from './CountryAPP/Search';
 
@@ -8,23 +8,20 @@ const App = () => {
     const { data, isLoading } = useFetch('https://restcountries.com/v3.1/all');
     const [filteredData, setFilteredData] = useState(data);
 
-    //add this useEffect hook to update filteredData when data changes
-    useEffect(() => {
-        setFilteredData(data);
-    }, [data]);
-
     const removeItem = (ids) => {
         const filtered = filteredData.filter((el) => el.name.common !== ids);
         setFilteredData(filtered);
     };
 
     const onSearch = (searchValue) => {
-        let value = searchValue.toLowerCase();
-        const newCountries = data.filter((el) => {
-            const countryName = el.name.common.toLowerCase();
-            return countryName.startsWith(value);
-        });
-        setFilteredData(newCountries);
+        if (data) {
+            let value = searchValue.toLowerCase();
+            const newCountries = data.filter((el) => {
+                const countryName = el.name.common.toLowerCase();
+                return countryName.startsWith(value);
+            });
+            setFilteredData(newCountries);
+        }
     };
 
     return (

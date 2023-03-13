@@ -7,7 +7,7 @@ const Search = ({ onSearch }) => {
     };
     useEffect(() => {
         onSearch(searchText);
-    }, [onSearch, searchText]);
+    }, [searchText]);
     return (
         <div className="max-w-3xl mx-auto">
             <input
