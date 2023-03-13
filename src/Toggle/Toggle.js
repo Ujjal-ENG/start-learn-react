@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
-const Toggle = () => {
+const Toggle = ({ data }) => {
     const [toggle, setToggle] = useState(false);
     const handleChang = () => {
         setToggle((ps) => !ps);
     };
     return (
         <div className="transition-all ease-in-out">
+            <h1>{data}</h1>
             {toggle && (
                 <h1 className="transition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil expedita magnam adipisci a repellendus deleniti optio perferendis cum repudiandae!</h1>
             )}
