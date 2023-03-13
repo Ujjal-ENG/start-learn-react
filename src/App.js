@@ -1,10 +1,14 @@
 import React from 'react';
-import Form from './components/Form';
+
+import Child from './CHILD-TO_PARENT/Child';
 
 const App = () => {
+    const handleChildData = (childData) => {
+        console.log(childData);
+    };
     return (
         <>
-            <Form />
+            <Child handleChildData={handleChildData} />
         </>
     );
 };
