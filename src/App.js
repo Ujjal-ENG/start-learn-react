@@ -1,10 +1,10 @@
 import React from 'react';
-import UserForm from './HOOKS-REF/UserForm';
+import UseReducer from './HOOKS_USE-REDUCER/UseReducer';
 
 const App = () => {
     return (
         <>
-            <UserForm />
+            <UseReducer />
         </>
     );
 };
