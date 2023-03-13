@@ -1,11 +1,10 @@
 import React from 'react';
-
-import Home from './CHILD-TO_PARENT/Home';
+import SignUp from './FormikValidation/SignUp';
 
 const App = () => {
     return (
         <>
-            <Home />
+            <SignUp />
         </>
     );
 };
