@@ -7,6 +7,10 @@ const Home = () => {
     const [todos, setTodos] = useState(dummytodos);
 
     const newTodo = (data) => {
+        if (todos.includes(data)) {
+            alert('Pease add new');
+            return;
+        }
         setTodos((ps) => [...ps, data]);
     };
     return (
