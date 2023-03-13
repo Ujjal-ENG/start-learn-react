@@ -1,10 +1,10 @@
 import React from 'react';
-import UseReducer from './HOOKS_USE-REDUCER/UseReducer';
+import ComponentA from './PROP-DRILING/ComponentA';
 
 const App = () => {
     return (
         <>
-            <UseReducer />
+            <ComponentA />
         </>
     );
 };
