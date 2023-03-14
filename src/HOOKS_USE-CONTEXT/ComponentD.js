@@ -9,6 +9,9 @@ const ComponentD = () => {
             {id}
             {name}
             {user.text}
+            <button type="button" onClick={user.switchTheme}>
+                {user.theme ? 'Light' : 'Dark'}
+            </button>
         </div>
     );
 };
