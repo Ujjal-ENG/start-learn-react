@@ -4,6 +4,7 @@ import { UserContext } from './UseContext';
 const ComponentD = () => {
     const user = useContext(UserContext);
     const { id, name } = user.user;
+    console.log('asi mama');
     return (
         <div>
             {id}

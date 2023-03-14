@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ComponentB from './ComponentB';
+
 import { UserContext } from './UseContext';
 
 const ComponentA = () => {
@@ -12,9 +13,11 @@ const ComponentA = () => {
     };
 
     return (
-        <UserContext.Provider value={{ user, text, switchTheme, theme }}>
-            <ComponentB />
-        </UserContext.Provider>
+        <>
+            <UserContext.Provider value={{ user, text, switchTheme, theme }}>
+                <ComponentB />
+            </UserContext.Provider>
+        </>
     );
 };
 
