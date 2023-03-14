@@ -1,12 +1,22 @@
 import React from 'react';
-import ComponentA from './HOOKS_USE-CONTEXT/ComponentA';
-import Section from './HOOKS_USE-CONTEXT/Section';
+import Navbar from './Pages/Navbar';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Blog from './Pages/Blog';
+import Contact from './Pages/Contact';
+
 const App = () => {
-    console.log('App theke bolsi');
     return (
         <>
-            <ComponentA />
-            <Section />
+            <BrowserRouter>
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </BrowserRouter>
         </>
     );
 };
