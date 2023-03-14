@@ -14,7 +14,7 @@ const Blog = () => {
                         <article key={id}>
                             <h3 className="text-3xl font-bold ">{title}</h3>
                             <p>{desc.slice(0, 90) + '....'}</p>
-                            <Link className="px-4 py-1 font-bold bg-blue-600" type="button" to={title}>
+                            <Link className="px-4 py-1 font-bold bg-blue-600" type="button" to={title} state={{ title, desc }}>
                                 Read More
                             </Link>
                         </article>
