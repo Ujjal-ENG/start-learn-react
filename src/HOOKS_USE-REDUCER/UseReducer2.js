@@ -1,10 +1,6 @@
 import React, { useReducer, useState } from 'react';
 
-const booksData = [
-    { id: 1, name: 'Pather Pachali' },
-    { id: 2, name: 'Srikant' },
-    { id: 3, name: 'Padma Nadir Majhi' }
-];
+const booksData = [{ id: 1, name: 'Pather Pachali' }];
 
 const Modal = ({ modalText }) => {
     return <h3 className="text-xl font-bold text-red-600">{modalText}</h3>;
@@ -34,16 +30,15 @@ const reducer = (state, action) => {
 
 const UseReducer2 = () => {
     const [newBook, setNewBook] = useState('');
-
     const [bookstate, dispatch] = useReducer(reducer, {
         books: booksData,
         modalText: '',
         isModalOpen: false
     });
-
     const onSubmit = (e) => {
         e.preventDefault();
-        const newBooks = { id: new Date().getSeconds().toString(), name: newBook };
+
+        const newBooks = { id: new Date().getSeconds().toLocaleString(), name: newBook };
         dispatch({
             type: 'ADD',
             payload: newBooks
@@ -69,11 +64,11 @@ const UseReducer2 = () => {
             </form>
             {bookstate.isModalOpen && <Modal modalText={bookstate.modalText} />}
             {bookstate.books &&
-                bookstate.books.map((el) => {
+                bookstate.books.map((el, idx) => {
                     return (
-                        <h4 className="text-xl font-bold" key={el.id}>
+                        <h4 className="text-xl font-bold" key={idx}>
                             {' '}
-                            {el.id}: {el.name}
+                            {el.name}
                             <button type="button" className="font-bold px-4 py-1 rounded bg-violet-600 text-white active:px-3 active:py=0 mx-7 my-5" onClick={() => removeBook(el.id)}>
                                 Remove Book
                             </button>
