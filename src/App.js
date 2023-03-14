@@ -1,10 +1,10 @@
 import React from 'react';
-import UseReducer2 from './HOOKS_USE-REDUCER/UseReducer2';
+import ComponentA from './HOOKS_USE-CONTEXT/ComponentA';
 
 const App = () => {
     return (
         <>
-            <UseReducer2 />
+            <ComponentA />
         </>
     );
 };
