@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 const User = () => {
-    const { userid } = useParams();
+    // const { userid } = useParams();
     const [searchParams, setSearchParams] = useSearchParams();
     const [name, serachName] = useState('');
     const [id, serachId] = useState(0);
