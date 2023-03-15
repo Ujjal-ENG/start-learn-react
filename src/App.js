@@ -10,7 +10,7 @@ const App = () => {
             <button onClick={() => setCount((ps) => ps + 1)} className="px-4 py-1 bg-black text-white font-bold active:px-3 active:py-1">
                 Increment
             </button>
-            <Message />
+            <Message numberOfMessage={count} />
         </>
     );
 };

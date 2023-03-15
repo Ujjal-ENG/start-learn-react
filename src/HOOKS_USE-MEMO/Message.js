@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 
-const Message = () => {
+const Message = ({ numberOfMessage }) => {
     console.log('Message Rendering');
-    return <div>Send 0 Message</div>;
+    return <div>Send {numberOfMessage} Message</div>;
 };
 
 export default memo(Message);
